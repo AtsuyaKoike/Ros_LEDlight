@@ -63,12 +63,12 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
     }
     
     else if ( input > 0 && input < 8 ) {
-    for ( i = 0; i < input; i++) {
-        gpio_base[7] = 1 << port[i];
-    }
-    for ( j = input; j <= N; j++ ) {
-        gpio_base[10] = 1 << port[j];
-    }
+        for ( i = 0; i < input; i++) {
+            gpio_base[7] = 1 << port[i];
+        }
+        for ( j = input; j <= N; j++ ) {
+            gpio_base[10] = 1 << port[j];
+        }
     }
     
     else if ( input == 0 ) {
