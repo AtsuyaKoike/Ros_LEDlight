@@ -78,9 +78,9 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
     }
     /*
     if( c == '8' ) {
-		for(i = 0; i < N; i++) {
-			gpio_base[7] = 1 << port[i]; //All_HIGH
-		}   
+        for(i = 0; i < N; i++) {
+		gpio_base[7] = 1 << port[i]; //All_HIGH
+	}   
     }
     */
     return 1;
